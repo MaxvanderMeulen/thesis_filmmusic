@@ -13,6 +13,7 @@ install.packages("zoo", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("stargazer", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("etable", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("gridExtra", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 
 # activate packages
 library(fixest)
@@ -28,9 +29,10 @@ library(zoo)
 library(stargazer)
 library(etable)
 library(gridExtra)
+library(readr)
 
-tunefind <- readr::read_csv(unzip("../../data/Archive.zip", "df_tunefind.csv"))
-tracks_playlists <- readr::read_csv(unzip("../../data/Archive.zip", "df_hannes.csv"))
+tunefind <- read_csv(unzip("data/Archive.zip", "df_tunefind.csv"))
+tracks_playlists <- read_csv(unzip("data/Archive.zip", "df_hannes.csv"))
 
 #Export to csv
 dir.create('../../gen')
