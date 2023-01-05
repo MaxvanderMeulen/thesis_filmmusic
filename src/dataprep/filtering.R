@@ -1,6 +1,6 @@
 #Read csv
 tunefind <- read.csv(file = '../../gen/dataprep/data/tunefind.csv')
-#tracks_playlists <- read.csv(file = '../../gen/dataprep/data/tracks_playlists.csv')
+tracks_playlists <- read.csv(file = '../../gen/dataprep/data/tracks_playlists.csv')
 
 library(lubridate)
 library(reshape2)
@@ -81,7 +81,7 @@ filtered_tunefind$song_title <- gsub(" ", "", filtered_tunefind$song_title)
 filtered_tunefind$song_artist <- gsub(" ", "", filtered_tunefind$song_artist)
 
 file.remove("../../gen/dataprep/data/tunefind.csv")
-#file.remove("../../gen/dataprep/data/tracks_playlists.csv")
+file.remove("../../gen/dataprep/data/tracks_playlists.csv")
 write.csv(filtered_tunefind, "../../gen/dataprep/data/filtered_tunefind.csv", row.names = FALSE)
-#write.csv(filtered_playlist, "../../gen/dataprep/data/filtered_playlist.csv", row.names = FALSE)
+write.csv(filtered_playlist, "../../gen/dataprep/data/filtered_playlist.csv", row.names = FALSE)
 
