@@ -1,4 +1,8 @@
+library(data.table)
+library(dplyr)
+library(ggplot2)
 
+data_long <- fread("../../gen/dataprep/data/data_long.csv")
 
 #create dummy for terms
 data_long$short_term <- ifelse(data_long$relative_treatment > -1 & data_long$relative_treatment < 5, 1, 0)
@@ -27,9 +31,11 @@ parallel_trends <- data_long_small %>%
   group_by(treatment_group, relative_treatment) %>%
   summarise(y = mean(value))
 
+pdf("../../gen/analysis/output/parallel_trends.pdf") 
 ggplot(parallel_trends, aes(y=y,x=relative_treatment, color= treatment_group)) +
   geom_line() + xlim(-50, 50) + ylim(0, 50) + geom_vline(xintercept = 0, linetype=3) +
   xlab("Relative treatment time in weeks") + ylab("Mean number of playlists") + theme_bw() + ggtitle("Parallel trends assumption")
+dev.off()
 
 #evidence pre post
 data_long = mutate(data_long, post_group = ifelse(post_treatment == 1, "post_treatment", "pre_treatment"))
@@ -39,7 +45,10 @@ pre_post <- data_long %>%
   group_by(post_group, relative_treatment) %>%
   summarise(y = mean(value))
 
+pdf("../../gen/analysis/output/pre_post.pdf") 
 ggplot(pre_post, aes(y=y,x=relative_treatment, color= post_group)) +
   geom_line() + xlim(-50, 50) + ylim(0,50) + geom_vline(xintercept = 0, linetype=3) +
   xlab("Relative treatment time") + ylab("Mean number of playlists") + theme_bw() + ggtitle("Evidence for pre and post treatment")
+dev.off()
 
+fwrite(data_long_small, "../../gen/dataprep/data/data_long_small.csv")
