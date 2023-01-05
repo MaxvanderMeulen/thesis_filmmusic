@@ -13,7 +13,7 @@
 #install.packages("stargazer", repos= 'https://mirror.lyrahosting.com/CRAN/')
 #install.packages("etable", repos= 'https://mirror.lyrahosting.com/CRAN/')
 #install.packages("gridExtra", repos= 'https://mirror.lyrahosting.com/CRAN/')
-#install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 
 # activate packages
 library(fixest)
