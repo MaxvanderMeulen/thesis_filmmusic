@@ -15,7 +15,8 @@ inner_join_sample <- inner_join %>%
   filter(!is.na(order)) %>% 
   filter(!is.na(duration_seconds_join))
 
-filtered_playlist_sample <- sample_n(filtered_playlist, 400000)
+filtered_playlist_sample <- filtered_playlist
+#filtered_playlist_sample <- sample_n(filtered_playlist, 400000)
 
 regular_join <-
   full_join(inner_join_sample, filtered_playlist_sample) %>%
