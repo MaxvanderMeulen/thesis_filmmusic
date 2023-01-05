@@ -1,5 +1,10 @@
-read_csv(file = "../../gen/dataprep/data/filtered_tunefind.csv")
-read_csv(file = "../../gen/dataprep/data/filtered_playlist.csv")
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(data.table)
+
+filtered_tunefind <- fread("../../gen/dataprep/data/filtered_tunefind.csv")
+filtered_playlist <- fread("../../gen/dataprep/data/filtered_playlist.csv")
 
 library(dplyr)
 library(tidyr)
@@ -30,7 +35,7 @@ file.remove("../../gen/dataprep/data/filtered_tunefind.csv")
 file.remove("../../gen/dataprep/data/filtered_playlists.csv")
 gc()
 
-write.csv(regular_join, "../../gen/dataprep/data/regular_join.csv", row.names = FALSE)
+fwrite(regular_join, "../../gen/dataprep/data/regular_join.csv")
 
 
 
