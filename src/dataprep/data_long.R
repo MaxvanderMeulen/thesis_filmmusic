@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 library(reshape2)
 library(dplyr)
 library(tidyr)
@@ -7,7 +6,6 @@ library(tidyverse)
 library(ggplot2)
 library(data.table)
 
->>>>>>> 0b22fdfe8a09fcccb3ba84a0c99efc4e112a8298
 regular_join <- fread("../../gen/dataprep/data/regular_join.csv")
 dta_m_class <- fread("../../gen/dataprep/data/dta_m_class.csv")
 
