@@ -29,8 +29,8 @@ library(stargazer)
 library(etable)
 library(gridExtra)
 
-tunefind <- readr::read_csv(unzip("data/Archive.zip", "df_tunefind.csv"))
-tracks_playlists <- readr::read_csv(unzip("data/Archive.zip", "df_hannes.csv"))
+tunefind <- readr::read_csv(unzip("../../data/Archive.zip", "df_tunefind.csv"))
+tracks_playlists <- readr::read_csv(unzip("../../data/Archive.zip", "df_hannes.csv"))
 
 #Export to csv
 dir.create('../../gen')
