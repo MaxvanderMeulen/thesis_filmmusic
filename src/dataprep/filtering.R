@@ -1,12 +1,13 @@
-#Read csv
-tunefind <- read.csv(file = '../../gen/dataprep/data/tunefind.csv')
-tracks_playlists <- read.csv(file = '../../gen/dataprep/data/tracks_playlists.csv')
-
 library(lubridate)
 library(reshape2)
 library(dplyr)
 library(tidyr)
 library(tidyverse)
+libarary(data.table)
+
+#Read csv
+tunefind <- fread('../../gen/dataprep/data/tunefind.csv')
+tracks_playlists <- fread('../../gen/dataprep/data/tracks_playlists.csv')
 
 #remove duplicate
 unique_tunefind <- unique(tunefind [ , 1:11 ])
@@ -82,6 +83,6 @@ filtered_tunefind$song_artist <- gsub(" ", "", filtered_tunefind$song_artist)
 
 file.remove("../../gen/dataprep/data/tunefind.csv")
 file.remove("../../gen/dataprep/data/tracks_playlists.csv")
-write.csv(filtered_tunefind, "../../gen/dataprep/data/filtered_tunefind.csv", row.names = FALSE)
-write.csv(filtered_playlist, "../../gen/dataprep/data/filtered_playlist.csv", row.names = FALSE)
+fwrite(filtered_tunefind, "../../gen/dataprep/data/filtered_tunefind.csv")
+fwrite(filtered_playlist, "../../gen/dataprep/data/filtered_playlist.csv")
 
