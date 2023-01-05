@@ -1,10 +1,15 @@
-all: ../../gen/dataprep/data/tunefind.csv ../../gen/dataprep/data/filtered_tunefind.csv ../../gen/dataprep/data/regular_join.csv
 
-../../gen/dataprep/data/tunefind.csv ../../gen/dataprep/data/tracks_playlists.csv: unzip_download.R ../../data/Archive.zip
+DATA = ../../gen/dataprep/data
+
+
+
+all: $(DATA)/tunefind.csv $(DATA)/filtered_tunefind.csv $(DATA)/regular_join.csv
+
+$(DATA)/tunefind.csv $(DATA)/tracks_playlists.csv: unzip_download.R ../../data/Archive.zip
 	R --vanilla < unzip_download.R
 
-../../gen/dataprep/data/filtered_tunefind.csv ../../gen/dataprep/data/filtered_playlist.csv: filtering.R ../../gen/dataprep/data/tunefind.csv ../../gen/dataprep/data/tracks_playlists.cs
+$(DATA)/filtered_tunefind.csv $(DATA)/filtered_playlist.csv: filtering.R $(DATA)/tunefind.csv $(DATA)/tracks_playlists.csv
 	R --vanilla < filtering.R
 
-../../gen/dataprep/data/regular_join.csv: joining.R ../../gen/dataprep/data/filtered_tunefind.csv ../../gen/dataprep/data/filtered_playlist.csv
+$(DATA)/regular_join.csv: joining.R $(DATA)/filtered_tunefind.csv $(DATA)/filtered_playlist.csv
 	R --vanilla < joining.R
