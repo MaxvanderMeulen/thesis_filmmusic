@@ -1,6 +1,10 @@
 read_csv(file = "../../gen/dataprep/data/filtered_tunefind.csv")
 read_csv(file = "../../gen/dataprep/data/filtered_playlist.csv")
 
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+
 #inner_join
 inner_join <- 
   inner_join(filtered_tunefind, filtered_playlist, by = c("song_title" = "name", "song_artist" = "artist_names"), keep = TRUE) %>%
