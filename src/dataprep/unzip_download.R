@@ -14,7 +14,7 @@ install.packages("stargazer", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("etable", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("gridExtra", repos= 'https://mirror.lyrahosting.com/CRAN/')
 install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
-install.packages("unzip", repos= 'https://mirror.lyrahosting.com/CRAN/')
+install.packages("UnZip", repos= 'https://mirror.lyrahosting.com/CRAN/')
 
 # activate packages
 library(fixest)
@@ -29,7 +29,7 @@ library(zoo)
 library(stargazer)
 library(etable)
 library(gridExtra)
-library(unzip)
+library(UnZip)
 library(readr)
 
 tunefind <- fread(cmd = 'unzip -p ../../data/Archive.zip df_tunefind.csv')
