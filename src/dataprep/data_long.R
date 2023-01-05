@@ -1,3 +1,10 @@
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(ggplot2)
+library(data.table)
+
 regular_join <- fread("../../gen/dataprep/data/regular_join.csv")
 dta_m_class <- fread("../../gen/dataprep/data/dta_m_class.csv")
 
