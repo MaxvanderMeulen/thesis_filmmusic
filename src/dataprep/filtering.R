@@ -3,7 +3,7 @@ library(reshape2)
 library(dplyr)
 library(tidyr)
 library(tidyverse)
-libarary(data.table)
+library(data.table)
 
 #Read csv
 tunefind <- fread('../../gen/dataprep/data/tunefind.csv')
