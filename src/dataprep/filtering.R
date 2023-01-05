@@ -2,6 +2,9 @@
 tunefind <- read.csv(file = '../../gen/dataprep/data/tunefind.csv')
 #tracks_playlists <- read.csv(file = '../../gen/dataprep/data/tracks_playlists.csv')
 
+library(lubridate)
+library(dplyr)
+
 #remove duplicate
 unique_tunefind <- unique(tunefind [ , 1:11 ])
 unique_tunefind$releasedate_episode <- dmy(unique_tunefind$releasedate_episode)
