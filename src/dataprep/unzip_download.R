@@ -31,7 +31,7 @@ library(etable)
 library(gridExtra)
 library(readr)
 
-tunefind <- read_csv(unzip("data/Archive.zip", "df_tunefind.csv"))
+tunefind <- read_csv(unzip("../../data/Archive.zip", "df_tunefind.csv"))
 #tracks_playlists <- read_csv(unzip("data/Archive.zip", "df_hannes.csv"))
 
 #Export to csv
