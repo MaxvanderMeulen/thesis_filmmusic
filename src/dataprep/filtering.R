@@ -59,8 +59,8 @@ filtered_tunefind %>%
   filter(!grepl('World of Dance Soundtrack', title))
 
 #cleaning playlists
-#filtered_playlist <- tracks_playlists %>%
-  #select(-cm_artist, -key, -mode, -spell)
+filtered_playlist <- tracks_playlists %>%
+  select(-cm_artist, -key, -mode, -spell)
 
 #rm(tracks_playlists, tunefind, unique_tunefind)
 #gc()
