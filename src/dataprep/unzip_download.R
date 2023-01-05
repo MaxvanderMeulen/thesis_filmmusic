@@ -17,25 +17,16 @@ install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 
 
 # activate packages
-library(fixest)
-library(reshape2)
 library(dplyr)
 library(tidyr)
 library(tidyverse)
-library(ggplot2)
 library(data.table)
-library(MatchIt)
-library(zoo)
-library(stargazer)
-library(etable)
-library(gridExtra)
-
 library(readr)
 
+# unzip data
 tunefind <- fread(cmd = 'unzip -p ../../data/Archive.zip df_tunefind.csv')
 tracks_playlists <- fread(cmd = 'unzip -p ../../data/Archive.zip df_hannes.csv')
-#tunefind <- read_csv(unzip("../../data/Archive.zip", "df_tunefind.csv"))
-#tracks_playlists <- read_csv(unzip("../../data/Archive.zip", "df_hannes.csv"))
+
 
 #Export to csv
 dir.create('../../gen')
