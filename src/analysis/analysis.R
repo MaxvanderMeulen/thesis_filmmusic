@@ -1,7 +1,8 @@
 library(data.table)
 library(dplyr)
 library(ggplot2)
-
+dir.create('../../gen/analysis')
+dir.create('../../gen/analysis/output')
 data_long <- fread("../../gen/dataprep/data/data_long.csv")
 
 #create dummy for terms
