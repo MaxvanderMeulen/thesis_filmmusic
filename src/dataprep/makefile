@@ -1,6 +1,4 @@
-DATA_DIR = ../../data
-
-../../gen/dataprep/data/tunefind.csv ../../gen/dataprep/data/tracks_playlists.csv: unzip_download.R $(DATA_DIR)/Archive.zip
+../../gen/dataprep/data/tunefind.csv ../../gen/dataprep/data/tracks_playlists.csv: unzip_download.R ../../data/Archive.zip
 	R --vanilla < unzip_download.R
 
 
