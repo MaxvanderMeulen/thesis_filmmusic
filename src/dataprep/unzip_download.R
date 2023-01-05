@@ -32,11 +32,11 @@ library(gridExtra)
 library(readr)
 
 tunefind <- read_csv(unzip("../../data/Archive.zip", "df_tunefind.csv"))
-tracks_playlists <- read_csv(unzip("../../data/Archive.zip", "df_hannes.csv"))
+#tracks_playlists <- read_csv(unzip("../../data/Archive.zip", "df_hannes.csv"))
 
 #Export to csv
 dir.create('../../gen')
 dir.create('../../gen/dataprep')
 dir.create('../../gen/dataprep/data')
 write.csv(tunefind, "../../gen/dataprep/data/tunefind.csv", row.names = FALSE)
-write.csv(tracks_playlists, "../../gen/dataprep/data/tracks_playlists.csv", row.names = FALSE)
+#write.csv(tracks_playlists, "../../gen/dataprep/data/tracks_playlists.csv", row.names = FALSE)
