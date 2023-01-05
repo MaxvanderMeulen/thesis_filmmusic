@@ -67,18 +67,18 @@ filtered_tunefind %>%
 #to lower, space gone, only char
 #filtered_playlist$name <- tolower(filtered_playlist$name)
 #filtered_playlist$artist_names <- tolower(filtered_playlist$artist_names)
-#filtered_tunefind$song_title <- tolower(filtered_tunefind$song_title)
-#filtered_tunefind$song_artist <- tolower(filtered_tunefind$song_artist)
+filtered_tunefind$song_title <- tolower(filtered_tunefind$song_title)
+filtered_tunefind$song_artist <- tolower(filtered_tunefind$song_artist)
 
 #filtered_playlist$name <- gsub("[[:punct:]]", "", filtered_playlist$name)
 #filtered_playlist$artist_names <- gsub("[[:punct:]]", "", filtered_playlist$artist_names)
-#filtered_tunefind$song_title <- gsub("[[:punct:]]", "", filtered_tunefind$song_title)
-#filtered_tunefind$song_artist <- gsub("[[:punct:]]", "", filtered_tunefind$song_artist)
+filtered_tunefind$song_title <- gsub("[[:punct:]]", "", filtered_tunefind$song_title)
+filtered_tunefind$song_artist <- gsub("[[:punct:]]", "", filtered_tunefind$song_artist)
 
 #filtered_playlist$name <- gsub(" ", "", filtered_playlist$name)
 #filtered_playlist$artist_names <- gsub(" ", "", filtered_playlist$artist_names)
-#filtered_tunefind$song_title <- gsub(" ", "", filtered_tunefind$song_title)
-#filtered_tunefind$song_artist <- gsub(" ", "", filtered_tunefind$song_artist)
+filtered_tunefind$song_title <- gsub(" ", "", filtered_tunefind$song_title)
+filtered_tunefind$song_artist <- gsub(" ", "", filtered_tunefind$song_artist)
 
 file.remove("../../gen/dataprep/data/tunefind.csv")
 #file.remove("../../gen/dataprep/data/tracks_playlists.csv")
