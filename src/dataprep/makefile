@@ -15,3 +15,6 @@ $(DATA)/regular_join.csv: joining.R $(DATA)/filtered_tunefind.csv $(DATA)/filter
 	
 $(DATA)/dta_m_class.csv: matching.R $(DATA)/regular_join.csv
 	R --vanilla < matching.R
+
+$(DATA)/data_long.csv"): data_long.R
+	R --vanilla < data_long.R
