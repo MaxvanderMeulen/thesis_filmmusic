@@ -15,11 +15,13 @@ data_long <- melt(regular_join, id.vars = c("rowid", "track_id", "name", "artist
 
 gc()
 
+#drop observations that did not make the selection
 analysis_join <- left_join(data_long, dta_m_class, by = "rowid") %>% 
   drop_na(subclass)
 
 data_long <- analysis_join
 
+#transform data_long
 names(data_long)[names(data_long) == "variable"] <- "date"
 data_long <- data_long %>%
   relocate(date, .before = releasedate_episode)
@@ -32,16 +34,20 @@ data_long$releasedate_episode <- as.Date(data_long$releasedate_episode)
 data_long$treatment <- ifelse(is.na(data_long$releasedate_episode), 0, 1)
 data_long$treatment[is.na(data_long$treatment)] <- 0
 
+# mirror subclass
 data_long <- data_long %>%
   group_by(subclass) %>%
   fill(releasedate_episode)
 
+#post treatment
 data_long$post_treatment <- ifelse(data_long$releasedate_episode<=data_long$date, 1, 0)
 data_long$post_treatment[is.na(data_long$post_treatment)] <- 0
 
+# pre treatment
 data_long$pre_treatment <- ifelse(data_long$releasedate_episode>=data_long$date, 1, 0)
 data_long$pre_treatment[is.na(data_long$pre_treatment)] <- 0
 
+#NA to zero dependent variable
 data_long$value[is.na(data_long$value)] <- 0
 
 #weeks since treatment
