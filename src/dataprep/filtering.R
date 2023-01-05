@@ -46,7 +46,7 @@ unique_tunefind$duration_seconds_join <- as.numeric(unique_tunefind$duration_sec
 unique_tunefind <- unique_tunefind %>% 
   select(-duration_seconds, -featured_song_duration)
 
-#filtering 
+#filtering tunefind
 filtered_tunefind <- unique_tunefind %>%
   filter(releasedate_episode > "2016-01-01", releasedate_episode < "2020-01-01") %>%
   filter(length(order) >= 3)
@@ -58,14 +58,14 @@ filtered_tunefind %>%
   filter(!grepl('American Idol', title)) %>% 
   filter(!grepl('World of Dance Soundtrack', title))
 
-#cleaning playlists
+#filtering playlists
 filtered_playlist <- tracks_playlists %>%
   select(-cm_artist, -key, -mode, -spell)
 
 
 gc()
 
-#to lower, space gone, only char
+#to lower, space gone, only char (for merge)
 filtered_playlist$name <- tolower(filtered_playlist$name)
 filtered_playlist$artist_names <- tolower(filtered_playlist$artist_names)
 filtered_tunefind$song_title <- tolower(filtered_tunefind$song_title)
