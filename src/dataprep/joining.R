@@ -27,7 +27,7 @@ regular_join$treatment <- ifelse(is.na(regular_join$releasedate_episode), 0, 1)
 regular_join$spotify_popularity <- ifelse(is.na(regular_join$spotify_popularity), 0, regular_join$spotify_popularity)
 
 file.remove("../../gen/dataprep/data/filtered_tunefind.csv")
-#file.remove("../../gen/dataprep/data/filtered_playlists.csv")
+file.remove("../../gen/dataprep/data/filtered_playlists.csv")
 gc()
 
 write.csv(regular_join, "../../gen/dataprep/data/regular_join.csv", row.names = FALSE)
