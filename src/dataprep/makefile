@@ -1,6 +1,6 @@
-all: data/Archive.zip
+all: ../data/Archive.zip
 
-data/Archive.zip : unzip_download.R
+../data/Archive.zip : unzip_download.R
 	R --vanilla < unzip_download.R
 
 
