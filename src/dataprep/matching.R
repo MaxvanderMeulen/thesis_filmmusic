@@ -6,6 +6,7 @@ library(tidyverse)
 
 regular_join <- fread("../../gen/dataprep/data/regular_join.csv")
 
+#create matching dataset
 match_join <- regular_join %>% 
   select(rowid, treatment, danceability, speechiness, valence, loudness, liveness, energy, acousticness, instrumentalness, tempo, nplaylists, spotify_popularity, X2016.01.04, X2016.02.08, X2016.03.07)
 
