@@ -64,7 +64,7 @@ filtered_playlist <- tracks_playlists %>%
 
 
 gc()
-filtered_playlist <- n_sample(filtered_playlist, 100000)
+filtered_playlist <- sample_n(filtered_playlist, 100000)
 
 #to lower, space gone, only char (for merge)
 filtered_playlist$name <- tolower(filtered_playlist$name)
