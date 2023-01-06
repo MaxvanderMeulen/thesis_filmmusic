@@ -17,7 +17,8 @@ inner_join_sample <- inner_join %>%
   filter(!is.na(duration_seconds_join))
 
 #lower sample size, otherwise unable to join/match/transform
-filtered_playlist_sample <- sample_n(filtered_playlist, 400000) 
+#filtered_playlist_sample <- sample_n(filtered_playlist, 400000) 
+filtered_playlist_sample <- filtered_playlist
 
 #join datasets
 regular_join <-
