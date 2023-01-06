@@ -9,8 +9,8 @@ install.packages("readr", repos= 'https://mirror.lyrahosting.com/CRAN/')
 library(data.table)
 
 # unzip data
-data_long_small <- fread(cmd = 'unzip -p ../../short_cut/data.zip data_long_50w.csv')
-data_long <- fread(cmd = 'unzip -p ../../short_cut/data.zip data_long_200w.csv')
+data_long_small <- fread(cmd = 'unzip -p ../../data/data.zip data_long_50w.csv')
+data_long <- fread(cmd = 'unzip -p ../../data/data.zip data_long_200w.csv')
 
 dir.create('../../gen')
 dir.create('../../gen/short_cut')
