@@ -2,7 +2,7 @@
 DATA = ../../gen/dataprep/data
 
 
-all: $(DATA)/tunefind.csv $(DATA)/filtered_tunefind.csv $(DATA)/regular_join.csv $(DATA)/dta_m_class.csv $(DATA)/data_long.csv
+all: $(DATA)/tunefind.csv $(DATA)/filtered_tunefind.csv $(DATA)/filtered_playlist.csv $(DATA)/tracks_playlists.csv $(DATA)/regular_join.csv $(DATA)/dta_m_class.csv $(DATA)/data_long.csv
 
 $(DATA)/tunefind.csv $(DATA)/tracks_playlists.csv: unzip_download.R ../../data/Archive.zip
 	R --vanilla < unzip_download.R
