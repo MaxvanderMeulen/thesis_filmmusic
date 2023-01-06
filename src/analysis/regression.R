@@ -13,7 +13,7 @@ sink()
 
 #regression with terms
 sink("../../gen/analysis/output/model_trends.txt")
-model_simple_terms <- feols(log(value) ~ post_treatment + treatment:post_treatment:short_term + treatment:post_treatment:middle_term + treatment:post_treatment:long_term + spotify_popularity | date, data = data_long_small, cluster = ~track_id)
+model_simple_terms <- feols(log(value) ~ post_treatment + treatment:post_treatment:short_term + treatment:post_treatment:middle_term + treatment:post_treatment:long_term| date + track_id, data = data_long_small, cluster = ~track_id)
 summary(model_simple_terms)
 sink()
 
