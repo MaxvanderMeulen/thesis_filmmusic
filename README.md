@@ -8,7 +8,7 @@ The changing way in which consumers discover music, especially with the use of t
 
 Make. [Installation Guide.](http://tilburgsciencehub.com/setup/make)\
 R. [Installation Guide.](http://tilburgsciencehub.com/setup/r/)\
-For R packages, see source code files (lines starting with 'library').
+For R packages, see source code files (lines starting with `library`).
 
 ### Running the code
 Open your command line/terminal:
