@@ -37,7 +37,7 @@ Pre & Post visual: `gen/analysis/output/pre_post.pdf`\
 Parallel Trends visual: `gen/analysis/output/parallel_trends.pdf`
 
 #### Option 2: The shortcut analysis
-*For only the results*
+*For only the results, instant analysis*
 
 Copy the repository code\
 Open the terminal\
