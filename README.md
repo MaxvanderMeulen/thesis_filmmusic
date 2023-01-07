@@ -1,5 +1,5 @@
-## Video Did Not Kill The Radiostar
-# The effect of a song featuring in a TV series and its music popularity
+# Video Did Not Kill The Radiostar
+## The effect of a song featuring in a TV series and its music popularity
 
 The changing way in which consumers discover music, especially with the use of technology, has an impact on music popularity. In this thesis, we study the influence of a song being featured in a TV series on its music popularity. Using a unique long-format dataset in which weekly song data serves as the unit of analysis, we estimate the treatment effect with a difference in differences analysis. 
 
