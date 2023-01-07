@@ -7,10 +7,10 @@ The changing way in which consumers discover music, especially with the use of t
 ### Dependencies
 
 Make. [Installation Guide.](http://tilburgsciencehub.com/setup/make)
-R. Installation Guide.
+R. [Installation Guide.](http://tilburgsciencehub.com/setup/r/)
 For R packages, see source code files (lines starting with library).
-For Python packages, see source code files (lines starting with from ... import or import)
-Running the code
+
+### Running the code
 Open your command line/terminal:
 
 Navigate to the directory in which this readme file resides, by typing pwd (Mac) or dir (Windows) in terminal
