@@ -13,6 +13,7 @@ For R packages, see source code files (lines starting with `library`).
 ### Running the code
 
 #### Option 1: The full analysis
+*Be Aware might take +1 hour and needs >16GB RAM*
 
 Copy the repository code\
 Open the terminal\
@@ -33,28 +34,24 @@ DiD model moderation: `gen/analysis/output/model_mod.txt`\
 Pre & Post visual: `gen/analysis/output/pre_post.pdf`\
 Parallel Trends visual: `gen/analysis/output/parallel_trends.pdf`
 
+#### Option 2: The shortcut analysis
+*For the results*
 
-
-
-
-
-
-
+Copy the repository code\
+Open the terminal\
+Run: `git clone` paste repository code\
+Run: `cd thesis_filmmusic` `cd short_cut`\
+Run: `make`
 
 ##### Generated files:
 
-Association rules: gen/dataprep/output/rules.csv
-Playlist classification: gen/data-preparation/output/playlist_clusters.csv
-Silhouette score line charts: gen/data-preparation/output/figures
-Label pairs (absolute): gen/data-preparation/output/label_pairs_abs.csv
-Label pairs (normalized): gen/data-preparation/output/label_pairs_norm.csv
+Data long analysis *without noise*: `gen/short_cut/data/data_long_50w.csv`
 
-
-
-
-
-
-
+DiD model simple: `gen/short_cut/output/model_simple.txt`\
+DiD model trends: `gen/short_cut/output/model_trends.txt`\
+DiD model moderation: `gen/short_cut/output/model_mod.txt`\
+Pre & Post visual: `gen/short_cut/output/pre_post.pdf`\
+Parallel Trends visual: `gen/short_cut/output/parallel_trends.pdf`
 
 ![Video-Didnt-Kill-Radio-V5-1](https://user-images.githubusercontent.com/98962990/210887465-22a32a09-0819-4d19-ab44-ccf97618ef06.png)
 Photo credits: Eoin Dowdall, 2022
