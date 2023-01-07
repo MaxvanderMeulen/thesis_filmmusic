@@ -45,6 +45,7 @@ Run: `make`
 
 ##### Generated files:
 
+Data long analysis: `gen/short_cut/data/data_long_200w.csv`\
 Data long analysis *without noise*: `gen/short_cut/data/data_long_50w.csv`
 
 DiD model simple: `gen/short_cut/output/model_simple.txt`\
