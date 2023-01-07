@@ -3,10 +3,10 @@
 
 The changing way in which consumers discover music, especially with the use of technology, has an impact on music popularity. In this thesis, we study the influence of a song being featured in a TV series on its music popularity. Using a unique long-format dataset in which weekly song data serves as the unit of analysis, we estimate the treatment effect with a difference in differences analysis. 
 
-#Running instructions
+## Running instructions
+### Dependencies
 
-
-Make. Installation Guide.
+Make. [Installation Guide.](http://tilburgsciencehub.com/setup/make)
 R. Installation Guide.
 For R packages, see source code files (lines starting with library).
 For Python packages, see source code files (lines starting with from ... import or import)
