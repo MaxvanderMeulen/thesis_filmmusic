@@ -14,10 +14,10 @@ For R packages, see source code files (lines starting with `library`).
 
 #### Option 1: The full analysis
 
-Copy the repository code
-Open the terminal
-Run: `git clone` paste repository code
-Run: `cd thesis_filmmusic`
+Copy the repository code\
+Open the terminal\
+Run: `git clone` paste repository code\
+Run: `cd thesis_filmmusic`\
 Run: `make`
 
 ##### Generated files:
@@ -25,13 +25,13 @@ Run: `make`
 Merged filtered Chartmetric & filtered Tunefind: `gen/dataprep/data/regular_join.csv`\
 Propensity Score Matching: `gen/dataprep/data/dta_m_class.csv`\
 Data long analysis: `gen/dataprep/data/data_long.csv`\
-Data long analysis *without noise*: `gen/dataprep/data/data_long_small.csv`\
+Data long analysis *without noise*: `gen/dataprep/data/data_long_small.csv`
 
 DiD model simple: `gen/analysis/output/model_simple.txt`\
 DiD model trends: `gen/analysis/output/model_trends.txt`\
 DiD model moderation: `gen/analysis/output/model_mod.txt`\
 Pre & Post visual: `gen/analysis/output/pre_post.pdf`\
-Parallel Trends visual: `gen/analysis/output/parallel_trends.pdf`\
+Parallel Trends visual: `gen/analysis/output/parallel_trends.pdf`
 
 
 
