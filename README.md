@@ -1,5 +1,7 @@
 # Video Did Not Kill The Radiostar
 ## The effect of a song featuring in a TV series and its music popularity
+![Video-Didnt-Kill-Radio-V5-1](https://user-images.githubusercontent.com/98962990/210887465-22a32a09-0819-4d19-ab44-ccf97618ef06.png)
+Photo credits: Eoin Dowdall, 2022
 
 The changing way in which consumers discover music, especially with the use of technology, has an impact on music popularity. In this thesis, we study the influence of a song being featured in a TV series on its music popularity. Using a unique long-format dataset in which weekly song data serves as the unit of analysis, we estimate the treatment effect with a difference in differences analysis. 
 
@@ -53,6 +55,3 @@ DiD model trends: `gen/short_cut/output/model_trends.txt`\
 DiD model moderation: `gen/short_cut/output/model_mod.txt`\
 Pre & Post visual: `gen/short_cut/output/pre_post.pdf`\
 Parallel Trends visual: `gen/short_cut/output/parallel_trends.pdf`
-
-![Video-Didnt-Kill-Radio-V5-1](https://user-images.githubusercontent.com/98962990/210887465-22a32a09-0819-4d19-ab44-ccf97618ef06.png)
-Photo credits: Eoin Dowdall, 2022
