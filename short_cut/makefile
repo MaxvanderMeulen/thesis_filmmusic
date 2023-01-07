@@ -1,5 +1,5 @@
-DATA = ../../gen/short_cut/data
-OUTPUT = ../../gen/short_cut/output
+DATA = ../gen/short_cut/data
+OUTPUT = ../gen/short_cut/output
 
 all: $(OUTPUT)/pre_post.pdf $(OUTPUT)/parallel_trends.pdf $(DATA)/data_long_50w.csv $(OUTPUT)/model_simple.txt $(OUTPUT)/model_trends.txt $(OUTPUT)/model_mod.txt
 
