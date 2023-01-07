@@ -13,7 +13,7 @@ For R packages, see source code files (lines starting with `library`).
 ### Running the code
 
 #### Option 1: The full analysis
-*Be Aware might take +1 hour and needs >16GB RAM*
+*Be aware might take +1 hour and needs >16GB RAM*
 
 Copy the repository code\
 Open the terminal\
